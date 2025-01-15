@@ -17,8 +17,7 @@ public class BishopBlackTest {
     @Test
     public void whenMoveBishopBlack() {
         BishopBlack bishopBlack = new BishopBlack(Cell.F4);
-        bishopBlack.copy(Cell.G5);
-        assertThat(bishopBlack.position()).isEqualTo(Cell.G5);
+        assertThat(bishopBlack.copy(Cell.H6).position()).isEqualTo(Cell.H6);
     }
 
     @Test
@@ -29,3 +28,4 @@ public class BishopBlackTest {
         assertThat(bishopBlack.way(Cell.G5)).isEqualTo(steps);
     }
 }
+
